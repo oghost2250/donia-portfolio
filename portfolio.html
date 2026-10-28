@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donia Emad Salman | Content Creator & Media Buyer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #fff0f5 0%, #ffe5f0 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 60px 0;
+            background: #ffffff;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(194, 24, 91, 0.15);
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, #e91e63, #f48fb1, #e91e63);
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid #f48fb1;
+            box-shadow: 0 8px 25px rgba(233, 30, 99, 0.3);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #c2185b;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #e91e63;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .contact-info span {
+            margin: 0 12px;
+        }
+
+        .contact-info i {
+            color: #e91e63;
+            margin-right: 6px;
+        }
+
+        /* Section Headers */
+        section {
+            margin-bottom: 40px;
+            animation: fadeIn 0.8s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #c2185b;
+            margin-bottom: 25px;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: #f48fb1;
+            border-radius: 2px;
+        }
+
+        /* Summary */
+        .summary {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border-left: 5px solid #e91e63;
+        }
+
+        .summary p {
+            font-size: 1.05rem;
+            color: #555;
+        }
+
+        /* Certifications */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .cert-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            border: 2px solid #fce4ec;
+            transition: all 0.3s ease;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-5px);
+            border-color: #e91e63;
+            box-shadow: 0 15px 35px rgba(233, 30, 99, 0.15);
+        }
+
+        .cert-icon {
+            font-size: 2.5rem;
+            color: #e91e63;
+            margin-bottom: 15px;
+        }
+
+        .cert-card h3 {
+            color: #c2185b;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 10px;
+        }
+
+        .cert-card .issuer {
+            color: #e91e63;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .cert-card .date {
+            color: #888;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .cert-card ul {
+            list-style: none;
+        }
+
+        .cert-card li {
+            color: #555;
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .cert-card li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: #f48fb1;
+        }
+
+        .cert-badge {
+            width: 100%;
+            max-width: 300px;
+            margin: 20px auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+            border: 3px solid #c2185b;
+            display: block;
+        }
+
+        /* Experience */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, #e91e63, #f48fb1);
+            border-radius: 2px;
+        }
+
+        .exp-item {
+            margin-bottom: 35px;
+            position: relative;
+        }
+
+        .exp-dot {
+            position: absolute;
+            left: -37px;
+            top: 5px;
+            width: 14px;
+            height: 14px;
+            background: #e91e63;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            box-shadow: 0 0 0 4px #fce4ec;
+        }
+
+        .exp-item h3 {
+            color: #c2185b;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .exp-item .company {
+            color: #e91e63;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .exp-item .date {
+            color: #888;
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .exp-item ul {
+            list-style: none;
+        }
+
+        .exp-item li {
+            color: #555;
+            margin-bottom: 8px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .exp-item li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: #f48fb1;
+            font-weight: bold;
+        }
+
+        /* Education */
+        .edu-card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border: 2px solid #fce4ec;
+        }
+
+        .edu-card h3 {
+            color: #c2185b;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 5px;
+        }
+
+        .edu-card .school {
+            color: #e91e63;
+            font-weight: 600;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border: 2px solid #fce4ec;
+        }
+
+        .skill-category h4 {
+            color: #c2185b;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background: #fce4ec;
+            color: #c2185b;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Contact */
+        .contact-section {
+            background: #c2185b;
+            color: #fff;
+            padding: 40px;
+            border-radius: 30px;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            color: #fff;
+        }
+
+        .contact-section h2::after {
+            background: #f48fb1;
+        }
+
+        .contact-section p {
+            color: #f8bbd0;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            background: #fff;
+            color: #c2185b;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .contact-link:hover {
+            background: #f48fb1;
+            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(233, 30, 99, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .container { padding: 20px 15px; }
+            header { padding: 40px 20px; }
+            .cert-grid { grid-template-columns: 1fr; }
+            .skills-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <header>
+        <img src="profile-photo.jpg" alt="Donia Emad Salman" class="profile-img" onerror="this.src='https://via.placeholder.com/150x150/e91e63/ffffff?text=Donia'">
+        
+        <h1>Donia Emad Salman</h1>
+        <div class="subtitle">Content Creator & Media Buyer</div>
+        <div class="contact-info">
+            <span><i>📞</i> 01015109093</span>
+            <span><i>✉️</i> makaemad140@gmail.com</span>
+            <span><i>📍</i> 6th of October City, Giza, Egypt</span>
+        </div>
+    </header>
+
+    <!-- Professional Summary -->
+    <section>
+        <h2>About Me</h2>
+        <div class="summary">
+            <p>Creative Business Administration student and certified Digital Marketer with hands-on experience in content creation, media buying, and social media management. Adept at designing engaging content calendars, writing compelling copy, and running targeted Meta Ads campaigns to drive e-commerce sales and local business bookings.</p>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section>
+        <h2>Certifications</h2>
+        <div class="cert-grid">
+            <div class="cert-card">
+                <div class="cert-icon">🏆</div>
+                <h3>Professional Diploma in Digital Marketing</h3>
+                <span class="issuer">Bibliotheca Scientiarum Agency (BSA)</span>
+                <span class="date">October 2026</span>
+                <ul>
+                    <li>Completed 40 hours of intensive training, applied practice, and a Final Graduation Project</li>
+                    <li>Demonstrated professional competency in Social Media Marketing</li>
+                    <li>Performance Marketing & Content Strategy</li>
+                    <li>Media Buying & Digital Advertising Fundamentals</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Certificate image showcase -->
+        <div style="text-align: center; margin-top: 30px;">
+            <img src="certificate.jpeg" alt="BSA Digital Marketing Diploma" class="cert-badge" onerror="this.style.display='none'">
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section>
+        <h2>Experience</h2>
+        <div class="timeline">
+            <div class="exp-item">
+                <div class="exp-dot"></div>
+                <h3>Freelance Content Creator & Media Buyer</h3>
+                <span class="company">Self-Employed</span>
+                <span class="date">2025 – Present</span>
+                <ul>
+                    <li><strong>Beauty Salon Account:</strong> Produced engaging reels and posts, authored high-converting copy, and managed targeted Meta Ad campaigns that successfully drove client bookings.</li>
+                    <li><strong>E-Commerce Business Owner:</strong> Directed brand identity, developed comprehensive content calendars, and executed paid advertising campaigns to boost online sales.</li>
+                </ul>
+            </div>
+            <div class="exp-item">
+                <div class="exp-dot"></div>
+                <h3>English Teacher</h3>
+                <span class="company">Nursery</span>
+                <span class="date">2024</span>
+                <ul>
+                    <li>Instructed young learners in foundational English vocabulary and phonics, cultivating strong communication and presentation skills.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section>
+        <h2>Education</h2>
+        <div class="edu-card">
+            <h3>BBA in Business Administration (Marketing Major) — Year 2</h3>
+            <span class="school">IAEMS</span>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section>
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4>Marketing</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">Meta Ads</span>
+                    <span class="skill-tag">Content Creation</span>
+                    <span class="skill-tag">Media Buying</span>
+                    <span class="skill-tag">Copywriting</span>
+                    <span class="skill-tag">Content Strategy</span>
+                    <span class="skill-tag">Performance Marketing</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>Tools</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">Canva</span>
+                    <span class="skill-tag">CapCut</span>
+                    <span class="skill-tag">Microsoft Excel</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>Languages</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">Arabic (Native)</span>
+                    <span class="skill-tag">English (B1+)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact-section">
+        <h2>Let's Connect</h2>
+        <p>Ready to elevate your brand with creative content and targeted ads?</p>
+        <div class="contact-links">
+            <a href="mailto:makaemad140@gmail.com" class="contact-link">✉️ Email Me</a>
+            <a href="tel:01015109093" class="contact-link">📞 Call Me</a>
+            <a href="https://wa.me/201015109093" class="contact-link" target="_blank">💬 WhatsApp</a>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 Donia Emad Salman | Content Creator & Media Buyer
+    </footer>
+
+</div>
+
+</body>
+</html>
